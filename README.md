@@ -61,6 +61,7 @@ If you need to use a custom host, you can specify it with the `--host` option:
 
 ```bash
 gitivity mirror gitlab glpat-_******************* my-gitlab-activity --host https://gitlab.example.com
+gitivity mirror github glpat-_******************* my-gitlab-activity --host https://github.example.com
 ```
 
 ## How It Works
