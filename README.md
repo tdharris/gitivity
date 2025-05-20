@@ -55,6 +55,14 @@ The main difference with this approach is that because the `mirror` command has 
 of the output repository, it can use the latest commit timestamp to enable incremental
 exports.
 
+## GitHub & GitLab Enterprise
+
+If you need to use a custom host, you can specify it with the `--host` option:
+
+```bash
+gitivity mirror gitlab glpat-_******************* my-gitlab-activity --host https://gitlab.example.com
+```
+
 ## How It Works
 
 The idea here is pretty simple. You first export your commit data from a service (e.g. GitLab)

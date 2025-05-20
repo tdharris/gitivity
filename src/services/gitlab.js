@@ -12,9 +12,10 @@ import { Gitlab } from '@gitbeaker/rest';
 export default async function* fetch(args) {
     let actions = [];
 
-    // open Gitlab API cliemt
+    // open Gitlab API client with custom host if provided
     let client = new Gitlab({
         token: args.token,
+        ...(args.host && { host: args.host }),
     });
 
     // fetch current user metadata for author tag

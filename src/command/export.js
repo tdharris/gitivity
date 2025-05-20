@@ -26,7 +26,12 @@ export default {
                 type: 'string',
                 description: 'A lower bound timestamp to export from.',
             })
+            .option('host', {
+                type: 'string',
+                description: 'Custom host URL (e.g., https://gitlab.example.com, https://github.example.com/api/v3).',
+            })
             .alias('f', 'from')
+            .alias('h', 'host')
             .require('service')
             .require('token');
     },
