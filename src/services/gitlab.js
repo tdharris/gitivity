@@ -43,7 +43,7 @@ export default async function* fetch(args) {
 
         // lower bounds
         if (args.from) {
-            opts.after = moment.utc(opts.after).format('YYYY-MM-DD');
+            opts.after = moment.utc(args.from).format('YYYY-MM-DD');
         }
 
         // walk the events of the user matching the entry type
