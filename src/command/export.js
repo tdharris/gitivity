@@ -28,7 +28,12 @@ export default {
             })
             .option('host', {
                 type: 'string',
-                description: 'Custom host URL (e.g., https://gitlab.example.com, https://github.example.com/api/v3).',
+                description:
+                    'Custom host URL (e.g., https://gitlab.example.com, https://github.example.com/api/v3).',
+            })
+            .option('ssl-no-verify', {
+                type: 'boolean',
+                description: 'Disable SSL certificate verification (insecure).',
             })
             .alias('f', 'from')
             .alias('h', 'host')

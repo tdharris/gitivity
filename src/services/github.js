@@ -10,10 +10,14 @@ import { Octokit } from '@octokit/rest';
  *      an array of actions to emit to stdout.
  */
 export default async function* fetch(args) {
+    if (args.sslNoVerify) {
+        throw new Error('Unsupported option for GitHub: --ssl-no-verify');
+    }
+
     // open GitHub API client with custom host if provided
     let client = new Octokit({
         auth: args.token,
-        ...(args.host && { baseUrl: args.host })
+        ...(args.host && { baseUrl: args.host }),
     });
 
     // retrieve the current user info
